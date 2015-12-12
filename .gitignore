@@ -1,5 +1,7 @@
 *.log
 .htaccess
+
+# wordpress junk
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
@@ -11,3 +13,6 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+
+# external modules can be obtained by running `npm install` command.
+node_modules/

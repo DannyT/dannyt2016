@@ -1,0 +1,15 @@
+{
+  "name": "danny-t.co.uk",
+  "version": "1.0.0",
+  "description": "wordpress theme for danny-t.co.uk",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DannyT",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3"
+  }
+}
