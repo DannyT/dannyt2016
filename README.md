@@ -39,6 +39,7 @@ Running `sass -v` tells me I'm running `Sass 3.4.20 (Selective Steve)`
 ### IISExpress
 The easiest(ish) way to host the site locally on Windows is to use IISExpress (already installed with Visual Studio but [available here](https://www.microsoft.com/en-us/download/details.aspx?id=48264) if not.
 > TIP: Add iisexpress to PATH variable (in an admin privileged command line: `SET PATH=%PATH%;%PROGRAMFILES%\IIS Express\`) 
+
 Add the following site config to your applicationhost.config file (Start > Run > `%UserProfile%\Documents\IISExpress\config` > OK)
 
 ```
@@ -60,3 +61,11 @@ Add the following site config to your applicationhost.config file (Start > Run >
 ```
 The just run `iisexpress /site:danny-t.co.uk` to start the site at [http://localhost:8080/](http://localhost:8080/)
 
+
+### Styles
+
+First, added [normalise](https://necolas.github.io/normalize.css/) with npm which offers a base css style sheet.
+
+Then added base sass files of styles.scss (main style sheet that imports all other styles), _vars.scss (variables reused throughout) and _body.scss (basic styles for body tag).
+
+Next needed to hook this all up to actually be compiled into standard css so installed grunt-sass task (via npm) and created gruntfile.js to load the task and do the magic.  

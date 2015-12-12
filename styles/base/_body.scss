@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BODY
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles related to the `<body>` tag.
+ */
+
+/**
+ * 1. Ensures the height of the body element is determined by the content, not the
+ *    height of the browser window.
+ */
+body {
+    background-color: $color-site-background;
+
+    position: relative; /* 1. */
+}

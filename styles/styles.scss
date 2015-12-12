@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Main base file, imports all the other files.
+ * -----------------------------------------------------------------------------
+ */
+
+@import "vars";
+
+/**
+ * Using normalize.css to make all browsers render default elements consistently.
+ * http://necolas.github.io/normalize.css/
+ */
+
+@import "../node_modules/normalize.css/normalize";
+
+/**
+ * Styles for the base HTML elements, e.g. body, ul, etc...
+ */
+@import "base/body";
