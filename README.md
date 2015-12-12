@@ -35,3 +35,28 @@ With Ruby installed we can install Sass using
 gem install sass
 ```
 Running `sass -v` tells me I'm running `Sass 3.4.20 (Selective Steve)`
+
+### IISExpress
+The easiest(ish) way to host the site locally on Windows is to use IISExpress (already installed with Visual Studio but [available here](https://www.microsoft.com/en-us/download/details.aspx?id=48264) if not.
+> TIP: Add iisexpress to PATH variable (in an admin privileged command line: `SET PATH=%PATH%;%PROGRAMFILES%\IIS Express\`) 
+Add the following site config to your applicationhost.config file (Start > Run > `%UserProfile%\Documents\IISExpress\config` > OK)
+
+```
+<site name="danny-t.co.uk" id="1" serverAutoStart="true">
+		<application path="/">
+			<virtualDirectory path="/" physicalPath="%userprofile%\Projects\danny-t.co.uk" />
+		</application>
+		<bindings>
+			<binding protocol="http" bindingInformation=":8080:localhost" />
+		</bindings>
+	</site>
+	<siteDefaults>
+		<logFile logFormat="W3C" directory="%IIS_USER_HOME%\Logs" />
+		<traceFailedRequestsLogging directory="%IIS_USER_HOME%\TraceLogFiles" enabled="true" maxLogFileSizeKB="1024" />
+	</siteDefaults>
+	<applicationDefaults applicationPool="Clr4IntegratedAppPool" />
+	<virtualDirectoryDefaults allowSubDirConfig="true" />
+</sites>
+```
+The just run `iisexpress /site:danny-t.co.uk` to start the site at [http://localhost:8080/](http://localhost:8080/)
+
