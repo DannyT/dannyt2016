@@ -1,7 +1,7 @@
 # Danny-T.co.uk 2016 theme
-_Another day another website repo..._
+> Another day another website repo...
 
-Latest attempt to get my site modernised.
+Latest attempt to get my personal site modernised.
 
 ## Dev diary
 
@@ -25,3 +25,13 @@ npm install grunt --save-dev
 ```
 _Use `--save-dev` to indicate dependencices only for development as I'll be bundling the minified/concatenated stuff into the repo anyway._
 
+> Side note: Using Visual Studio Code is working well so far and `Ctrl + Shift + V` is an awesome shortcut for previewing markdown.
+
+### Sass
+Sass is a preprocessor that adds a load of cool stuff to CSS. It does however depend on Ruby so download from [rubyinstaller.org](http://rubyinstaller.org), I went with 2.1.7 at time of writing (which we can check by running `ruby -v`)
+
+With Ruby installed we can install Sass using 
+```
+gem install sass
+```
+Running `sass -v` tells me I'm running `Sass 3.4.20 (Selective Steve)`
